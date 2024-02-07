@@ -133,3 +133,149 @@ ul.secondary li p {
 main {
   border: 1px solid white;
 }
+
+/* Your Fixes Below */
+
+body {
+  background: #303a52;
+  font-family: "Nunito", sans-serif;
+}
+
+nav {
+  background: #2c354a;
+}
+
+main {
+  border: unset;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+a.cta-btn {
+  font-size: 0.9rem;
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
+}
+nav {
+  text-align: left;
+}
+nav svg {
+  margin: 1em 0.5em;
+}
+
+nav ul li a {
+  font-size: 1.2rem;
+  padding: 0.8em 1em;
+}
+
+.inner-wrapper {
+  padding: 1em;
+}
+
+.panel,
+.columns {
+  padding: 0.5em 1em;
+  margin-bottom: 2em;
+}
+
+@media (min-width: 420px) {
+  body {
+    padding: 1em;
+    text-align: left;
+  }
+  ul.data {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  ul.data li {
+    flex: 0 0 50%;
+  }
+}
+
+@media (min-width: 550px) {
+  ul.data {
+    justify-content: center;
+  }
+  .panel ul.data li {
+    flex: 0 0 33%;
+  }
+  .panel ul.data li p {
+    margin-bottom: 0;
+  }
+  nav {
+    width: 40%;
+  }
+}
+
+@media (min-width: 720px) {
+  body {
+    padding: 1.5em;
+  }
+
+  .columns {
+    display: flex;
+  }
+  .col {
+    flex: 0 0 48%;
+  }
+  .secondary {
+    margin-left: 3em;
+  }
+  ul.secondary {
+    margin-top: 0;
+  }
+  nav {
+    width: 30%;
+  }
+}
+
+@media (min-width: 900px) {
+  body {
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-template-rows: 70px auto;
+    grid-template-areas:
+      "sidebar header"
+      "sidebar main";
+    padding: 0;
+  }
+  header,
+  main {
+    padding: 1.5em;
+  }
+  header {
+    grid-area: header;
+  }
+  nav {
+    grid-area: sidebar;
+    opacity: 1;
+    visibility: unset;
+    transform: translateX(0);
+    width: 100%;
+    position: unset;
+  }
+  main {
+    grid-area: main;
+  }
+  a.logo {
+    margin: 0;
+  }
+  svg {
+    display: none;
+  }
+}
